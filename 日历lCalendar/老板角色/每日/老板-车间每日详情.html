@@ -1,0 +1,275 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="../../css/common.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/lCalendar.css">
+    <link href="../../css/style.css" rel="stylesheet">
+    <script src="../../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.SuperSlide.2.1.js"></script>
+    <script src="../../js/swiper.min.js"></script>
+    <script src="../../js/lCalendar.js"></script>
+    <title>每日报表</title>
+    <style>
+        body{
+            background:#e6e6e6;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <header>
+        <a href="#_" class="menuh"></a>
+        <input type="button" value="" class="edits" id="demo1" data-lcalendar="2011-01-1,2019-12-31">
+        每日报表
+    </header>
+    <div class="day-report prod-page">
+        <div class="report-day">
+            <div class="tops">
+                <ul class="list">
+                    <li>3月(2017)</li>
+                </ul>
+            </div>
+            <div class="days-list" id="days-list">
+                <div class="swiper-container">
+                    <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><a href="#_">1</a></li>
+                        <li class="swiper-slide"><a href="#_">2</a></li>
+                        <li class="swiper-slide"><a href="#_">3</a></li>
+                        <li class="swiper-slide"><a href="#_">4</a></li>
+                        <li class="swiper-slide"><a href="#_">5</a></li>
+                        <li class="swiper-slide"><a href="#_">6</a></li>
+                        <li class="swiper-slide"><a href="#_">7</a></li>
+                        <li class="swiper-slide"><a href="#_">8</a></li>
+                        <li class="swiper-slide"><a href="#_">9</a></li>
+                        <li class="swiper-slide"><a href="#_">10</a></li>
+                        <li class="swiper-slide"><a href="#_">11</a></li>
+                        <li class="swiper-slide"><a href="#_">12</a></li>
+                        <li class="swiper-slide"><a href="#_">13</a></li>
+                        <li class="swiper-slide"><a href="#_">14</a></li>
+                        <li class="swiper-slide"><a href="#_">15</a></li>
+                        <li class="swiper-slide"><a href="#_">16</a></li>
+                        <li class="swiper-slide"><a href="#_">17</a></li>
+                        <li class="swiper-slide"><a href="#_">18</a></li>
+                        <li class="swiper-slide"><a href="#_">19</a></li>
+                        <li class="swiper-slide"><a href="#_">20</a></li>
+                        <li class="swiper-slide"><a href="#_">21</a></li>
+                        <li class="swiper-slide"><a href="#_">22</a></li>
+                        <li class="active swiper-slide"><a href="#_">23</a></li>
+                        <li class="swiper-slide"><a href="#_">24</a></li>
+                        <li class="swiper-slide"><a href="#_">25</a></li>
+                        <li class="swiper-slide"><a href="#_">26</a></li>
+                        <li class="swiper-slide"><a href="#_">27</a></li>
+                        <li class="swiper-slide"><a href="#_">28</a></li>
+                        <li class="swiper-slide"><a href="#_">29</a></li>
+                    </ul>
+                </div>
+
+                <script>
+                    var swiper = new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        slidesPerView: 7,
+                        paginationClickable: true,
+                        spaceBetween: 0
+                    });
+                    $(".days-list .swiper-wrapper li").each(function(i){
+                        var liWisth=($(window).width()-20)/7;
+                        if($(this).hasClass("active")){
+                            $(".days-list .swiper-wrapper").css("transform","translate3d("+(-(i-3)*(liWisth))+"px, 0px, 0px)");
+                            $(".days-list .swiper-wrapper li").each(function(m){
+                                if(m>i){
+                                    $(this).addClass("next-num");
+                                }
+                                else{
+                                    $(this).removeClass("next-num");
+                                }
+                            })
+                        }
+                        $(this).click(function(){
+                            console.log("aaa");
+                            $(this).addClass("active").siblings().removeClass("active");
+                            $(".days-list .swiper-wrapper").css("transform","translate3d("+(-(i-3)*(liWisth))+"px, 0px, 0px)");
+                            $(".days-list .swiper-wrapper li").each(function(m){
+                                if(m>i){
+                                    $(this).addClass("next-num");
+                                }
+                                else{
+                                    $(this).removeClass("next-num");
+                                }
+                            })
+                        })
+                    })
+                </script>
+            </div>
+            <div class="s-space"></div>
+            <div class="day-depart">
+                <ul>
+                    <li>
+                        <a class="cons">
+                            <div class="img a"></div>
+                            <div class="ms">库存</div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a class="cons">
+                            <div class="img b"></div>
+                            <div class="ms">车间一</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cons">
+                            <div class="img b"></div>
+                            <div class="ms">车间二</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cons">
+                            <div class="img c"></div>
+                            <div class="ms">电子套件</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="cons">
+                            <div class="img d"></div>
+                            <div class="ms">药包</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="s-space"></div>
+        </div>
+        <div class="prod-detail">
+            <div class="g">
+                <div class="pro-head pro-head1"><span class="n">纤秀包今日生产数</span><span class="num yellow">1000箱</span></div>
+                <div class="report-day">
+                    <div class="report-detail">
+                        <div class="g">
+                            <table width="100%">
+                                <thead><tr><th width="33.33%"></th><th width="33.33%"></th><th width="33.33%"></th></tr></thead>
+                                <tbody>
+                                <tr><td colspan="3">日达成率 <span class="yellow">100%</span></td></tr>
+                                <tr class="bg-h"><td>本月计划</td><td>实际完成</td><td>月达标率</td></tr>
+                                <tr class="h"><td>1000箱</td><td>1000箱</td><td>100%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-space"></div>
+            <div class="g">
+                <div class="pro-head pro-head1"><span class="n">暖护包今日生产数</span><span class="num yellow">1000箱</span></div>
+                <div class="report-day">
+                    <div class="report-detail">
+                        <div class="g">
+                            <table width="100%">
+                                <thead><tr><th width="33.33%"></th><th width="33.33%"></th><th width="33.33%"></th></tr></thead>
+                                <tbody>
+                                <tr><td colspan="3">日达成率 <span class="yellow">100%</span></td></tr>
+                                <tr class="bg-h"><td>本月计划</td><td>实际完成</td><td>月达标率</td></tr>
+                                <tr class="h"><td>1000箱</td><td>1000箱</td><td>100%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-space"></div>
+            <div class="g">
+                <div class="pro-head pro-head1"><span class="n">肩颈包今日生产数</span><span class="num yellow">1000箱</span></div>
+                <div class="report-day">
+                    <div class="report-detail">
+                        <div class="g">
+                            <table width="100%">
+                                <thead><tr><th width="33.33%"></th><th width="33.33%"></th><th width="33.33%"></th></tr></thead>
+                                <tbody>
+                                <tr><td colspan="3">日达成率 <span class="yellow">100%</span></td></tr>
+                                <tr class="bg-h"><td>本月计划</td><td>实际完成</td><td>月达标率</td></tr>
+                                <tr class="h"><td>1000箱</td><td>1000箱</td><td>100%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-space"></div>
+            <div class="g">
+                <div class="pro-head pro-head1"><span class="n">养护包今日生产数</span><span class="num yellow">1000箱</span></div>
+                <div class="report-day">
+                    <div class="report-detail">
+                        <div class="g">
+                            <table width="100%">
+                                <thead><tr><th width="33.33%"></th><th width="33.33%"></th><th width="33.33%"></th></tr></thead>
+                                <tbody>
+                                <tr><td colspan="3">日达成率 <span class="yellow">100%</span></td></tr>
+                                <tr class="bg-h"><td>本月计划</td><td>实际完成</td><td>月达标率</td></tr>
+                                <tr class="h"><td>1000箱</td><td>1000箱</td><td>100%</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="s-space"></div>
+            <div class="report-day">
+                <div class="rest-num">
+                    <div class="admin">
+                        <dl><dt>药包纤秀备件余量</dt><dd>700箱</dd></dl>
+                        <dl><dt>药包暖护备件余量</dt><dd>700箱</dd></dl>
+                        <dl><dt>药包养护备件余量</dt><dd>700箱</dd></dl>
+                        <dl><dt>药包肩颈备件余量</dt><dd>700箱</dd></dl>
+                        <dl><dt>电子腰带备件余量</dt><dd>700箱</dd></dl>
+                        <dl><dt>电子肩颈备件余量</dt><dd>700箱</dd></dl>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="nav-bg"></div>
+</div>
+<div class="model-slide">
+    <div class="bg"></div>
+    <div class="slidebar">
+        <div class="navbar-page">
+            <div class="admin">
+                <div class="lists">
+                    <div class="cons">
+                        <div class="tb-header">
+                            <div class="lf">
+                                <div class="tb"><img src="../../images/head.jpg" width="63" alt=""></div>
+                                <div class="ms">
+                                    <div class="m">董事长</div>
+                                    <div class="s">12345678890</div>
+                                </div>
+                            </div>
+                            <div class="rt">
+                                <a class="set"></a>
+                            </div>
+                        </div>
+                        <div class="report-lists">
+                            <dl><dt><a href="#_">每日报表</a></dt></dl>
+                            <dl><dt><a href="#_">每月报表</a></dt></dl>
+                            <dl><dt><a href="#_">通&nbsp;讯&nbsp;录</a></dt></dl>
+                            <dl><dt><a href="#_">消息中心 <span class="num">2</span></a></dt></dl>
+                            <dl><dt><a href="#_">统计分析</a></dt></dl>
+                            <dl><dt><a href="#_">制定计划</a></dt></dl>
+                        </div>
+                        <button type="button" class="button02">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-mark">
+            <a class="menus"></a>
+        </div>
+    </div>
+</div>
+<script src="../../js/index.js"></script>
+</body>
+</html>
