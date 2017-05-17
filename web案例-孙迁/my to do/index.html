@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>my to do</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-datetimepicker/bulid/jquery.datetimepicker.min.css">
+	
+	
+</head>
+<body>
+	<div class="msg">
+		<span class="msg-content"></span><br>
+		<button class="confirmed" >点击关闭</button>
+	</div>
+	<div class="container"> <!-- 总容器开始 -->
+	    <h1>My To Do List</h1>
+		<form class="add-task">
+			<input type="text" placeholder="晚上记得买菜" name="content" autofocus autocomplete="off">
+			<button type="submit">submit</button>
+		</form>
+		<div class="task-list"><!-- 清单列表开始-->
+			<!-- <div class="task-item">任务开始
+				<span><input type="checkbox"></span>
+				<span class="task-content">item content 1</span>
+				<span>delete</span>
+				<span>detail</span>
+			</div>任务结束 -->
+		</div> <!-- 清单列表结束 -->
+		<div class="task-detail-mask"></div>
+		<div class="task-detail"><!-- 任务详情开始 -->
+			
+			
+		</div>
+
+	</div> <!-- 总容器结束 -->
+	<video src="alert.mp3" class="alerter"></video>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/store/store.min.js"></script>
+	<script src="js/base.js"></script>
+    <script src="js/jquery-datetimepicker/bulid/jquery.datetimepicker.full.min.js"></script>
+	<script src="js/jquery-datetimepicker/bulid/jquery.datetimepicker.min.js"></script>
+		
+	
+</body>
+</html>
