@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="telephone=no" name="format-detection">
+    <link href="css/common.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery.bxslider.css"/>
+    <link href="css/style.css" rel="stylesheet" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <title>取货清洗类</title>
+</head>
+<body>
+<div class="content">
+    <div class="service-page">
+        <div class="header">
+            <a href="#_" class="return"></a>
+            <input type="text" class="search" placeholder="请输入名称进行搜索"/>
+            <input type="submit" class="btn" value="搜索"/>
+        </div>
+        <div class="serv-body">
+            <div class="main">
+                <div class="tit">配饰</div>
+                <div class="line"></div>
+                <ul class="serv-list">
+                    <li>
+                        <div class="con">
+                            <div class="img"><img src="images/servimg.jpg" width="100%" alt=""/></div>
+                            <div class="sm">围巾</div>
+                            <div class="price">￥<span>8.00</span></div>
+                            <div class="red-con"><div class="red-box"></div></div>
+                            <div class="add"></div>
+                            <a href="#_"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <div class="img"><img src="images/servimg.jpg" width="100%" alt=""/></div>
+                            <div class="sm">围巾</div>
+                            <div class="price">￥<span>8.00</span></div>
+                            <div class="red-con"><div class="red-box"></div></div>
+                            <div class="add"></div>
+                            <a href="#_"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <div class="img"><img src="images/servimg.jpg" width="100%" alt=""/></div>
+                            <div class="sm">围巾</div>
+                            <div class="price">￥<span>8.00</span></div>
+                            <div class="red-con"><div class="red-box"></div></div>
+                            <div class="add"></div>
+                            <a href="#_"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <div class="img"><img src="images/servimg.jpg" width="100%" alt=""/></div>
+                            <div class="sm">围巾</div>
+                            <div class="price">￥<span>8.00</span></div>
+                            <div class="red-con"><div class="red-box"></div></div>
+                            <div class="add"></div>
+                            <a href="#_"></a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="tit">小件</div>
+                <div class="line"></div>
+                <ul class="serv-list">
+                    <li>
+                        <div class="con">
+                            <div class="img"><img src="images/servimg.jpg" width="100%" alt=""/></div>
+                            <div class="sm">围巾</div>
+                            <div class="price">￥<span>8.00</span></div>
+                            <div class="red-con"><div class="red-box"></div></div>
+                            <div class="add"></div>
+                            <a href="#_"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <div class="img"><img src="images/servimg.jpg" width="100%" alt=""/></div>
+                            <div class="sm">围巾</div>
+                            <div class="price">￥<span>8.00</span></div>
+                            <div class="red-con"><div class="red-box"></div></div>
+                            <div class="add"></div>
+                            <a href="#_"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <div class="img"><img src="images/servimg.jpg" width="100%" alt=""/></div>
+                            <div class="sm">围巾</div>
+                            <div class="price">￥<span>8.00</span></div>
+                            <div class="red-con"><div class="red-box"></div></div>
+                            <div class="add"></div>
+                            <a href="#_"></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="con">
+                            <div class="img"><img src="images/servimg.jpg" width="100%" alt=""/></div>
+                            <div class="sm">围巾</div>
+                            <div class="price">￥<span>8.00</span></div>
+                            <div class="red-con"><div class="red-box"></div></div>
+                            <div class="add"></div>
+                            <a href="#_"></a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="serv-style">
+                    <a class="s select">衣物类</a>
+                    <a class="s">家纺类</a>
+                    <a class="s">鞋靴类</a>
+                    <a class="s">衣物类</a>
+                    <a class="s">鞋靴类</a>
+                </div>
+                <a class="shop-car" href="#_">
+                    <div class="num">0</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/fly.js"></script>
+<script>
+    var end=$(".service-page .shop-car").offset();
+    console.log(end.left);
+    console.log(end.top);
+    $(".serv-body .serv-list li").each(function(){
+        $(this).find(".con").click(function(){
+            var start=$(this).find(".red-box").offset();
+            console.log(start.left);
+            console.log(start.top);
+            $('<div class="red-box"></div>').fly({
+                start: {top: start.top, left: start.left},
+                end: {top: (end.top+30), left: end.left+10, width: 10, height: 10},
+                speed: 1.1,
+                onEnd: function(){
+                    this.destory();
+                }
+            });
+        })
+    })
+</script>
+<script>
+    $(".serv-list li").each(function(){
+        $(this).click(function(){
+            var num=$(".shop-car .num").html();
+            $(".shop-car .num").html(++num);
+        })
+    })
+</script>
+</body>
+</html>
